@@ -136,6 +136,27 @@ public class VLCGTransformationPropertyTree implements VLCGInputHandler {
     }
 
     /**
+     * Return the fully qualified path to the OrderFile
+     * @return String - path to the OrderFile
+     */
+    public String lookupKwateeSpeciesOrderFilePath() throws Exception {
+
+        // Lookup the location of the KWATEE_INPUT_PATH -
+        String xpath_input_path = ".//path[@symbol='KWATEE_INPUT_PATH']/@path_location";
+        String input_path = lookupPropertyValueFromTreeUsingXPath(xpath_input_path);
+
+        // Lookup the network file name -
+        String xpath_network_filename = ".//OrderFile[@path_symbol='KWATEE_INPUT_PATH']/@filename";
+        String filename = lookupPropertyValueFromTreeUsingXPath(xpath_network_filename);
+
+        // Put these together -
+        String fully_qualified_path = input_path+filename;
+
+        // return -
+        return fully_qualified_path;
+    }
+
+    /**
      * Return the fully qualified path to the NetworkFile
      * @return String - path to the NetworkFile
      */
