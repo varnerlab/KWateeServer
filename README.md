@@ -3,7 +3,7 @@ Introduction
 
 Kwatee is an open source mathematical model code generation system for the [Julia programming language](http://julialang.org).  Kwatee is written in Java, and uses a plugin architetcure to generate Julia code from simple model specifications. KwateeServer (and all the plugins developed by [Varnerlab](http://www.varnerlab.org)) are open source and available under an [MIT license](https://opensource.org/licenses/MIT). 
 
-#### How does Kwatee work?
+##### How does Kwatee work?
 
 Model input specification files are transformed into model code using specific Kwatee plugins. Kwatee server is responsible for loading the plugins and executing the code generation job given a Configuration.xml file. [Varnerlab](http://www.varnerlab.org) has developed several plugins already, however if you want to generate a model type that we do not support, no problem you can write your own plugin!
 
@@ -37,7 +37,7 @@ There are a few *simple* steps to install Kwatee on your system, assuming you al
 
 To test your Kwatee installation, we have included example model specifications and Configuration.xml files in the examples subdirectory of this project. To execute these examples, navigate to the desired example and follow the instructions in the README.
 	
-#### What Kwatee plugins are currently avaialbe and where do I get them?
+##### What Kwatee plugins are currently avaialbe and where do I get them?
 
 [Varnerlab](http://www.varnerlab.org) has developed several Kwatee plugins that we use in our research at Purdue University. Each of these plugins is open source and available under an [MIT license](https://opensource.org/licenses/MIT):
 
