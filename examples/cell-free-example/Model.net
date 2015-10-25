@@ -1,0 +1,35 @@
+/ ===================================================================== //
+// Test model file for the Kwatee cell free plugin
+// Author: J. Varner
+// School of Chemical Engineering, Purdue University
+// West Lafayette, IN 47097
+//
+// Version: 1.01
+// ==================================================================== //
+
+// ==================================================================== //
+// Metabolic reactions -
+[kwatee.metabolic.reaction.handler]
+//
+// Reaction records are structured as:
+// NAME (unique),reactants,products,reverse {0|-inf},forward {0|inf};
+// ==================================================================== //
+
+R_1,A+2*B,C,0,inf;
+R_2,C,D+E,0,inf;
+R_3,D,[],0,inf;
+R_4,E,F,-inf,inf;
+R_5,F,[],0,inf;
+R_6,[],A,0,inf;
+R_7,[],B,0,inf;
+
+// ==================================================================== //
+// Allosteric regulation -
+[kwatee.allosteric.control.handler]
+//
+// Allosteric records have the form:
+// NAME (unique),actor (regulator),target,type {inhibition|activation}
+// ==================================================================== //
+INHIBITION_RXN_NAME,C,R_6,inhibition;
+ACTIVATION_RXN_NAME_2,A,R_1,activation;
+ACTIVATION_RXN_NAME,A,R_4,activation;
