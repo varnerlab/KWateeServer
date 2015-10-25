@@ -7,7 +7,7 @@ __How does Kwatee work?__ Model input specification files are transformed into m
 
 __Reference__: 
 
-[Jeffrey D. Varner (2015) Kwatee: A Code Generation System for Biochemical Models in the Julia Programming Language http://dx.doi.org/10.5281/zenodo.32627](http://dx.doi.org/10.5281/zenodo.32627)
+[Jeffrey D. Varner (2015) Kwatee: A Code Generation System for Biochemical Models in the Julia Programming Language http://dx.doi.org/10.5281/zenodo.32628](http://dx.doi.org/10.5281/zenodo.32628)
 
 Installation on Linux or Mac OS X
 --------------
