@@ -1,0 +1,49 @@
+// ============================================================ //
+// Test model file for the Kwatee GRN plugin
+// Author: J. Varner
+// Version: 1.0
+// ============================================================ //
+//
+// ============================================================ //
+// Signal transduction reactions -
+#pragma handler_class = VLCGSignalTransductionParserDelegate
+// ============================================================ //
+trigger_addition,[],T,0,inf;
+trigger_removal,T,[],0,inf;
+RNAP_assembly,RNAP,[],-inf,inf;
+RIOBOSOME_assembly,RIBOSOME,[],-inf,inf;
+
+// Conversion of [] => A -(P3)-> B => []
+MR_1,M_A,M_B,0,inf;
+MR_A_SOURCE,[],M_A,0,inf;
+MR_B_SINK,M_B,[],0,inf;
+
+// ============================================================ //
+// Control terms signal transduction -
+#pragma handler_class = VLCGSignalTransductionControlParserDelegate
+// ============================================================ //
+catalysis_MR_1,P3,MR_1,activation;
+
+// ============================================================ //
+// Gene expression reactions -
+#pragma handler_class = VLCGGeneExpressionParserDelegate
+// ============================================================ //
+induction_gene_1,gene_1,mRNA_1,RNAP;
+induction_gene_2,gene_2,mRNA_2,RNAP;
+induction_gene_3,gene_3,mRNA_3,RNAP;
+
+// ============================================================ //
+// Translation reactions -
+#pragma handler_class = VLCGTranslationParserDelegate
+// ============================================================ //
+translation_mRNA_1,mRNA_1,P1,RIBOSOME;
+translation_mRNA_2,mRNA_2,P2,RIBOSOME;
+translation_mRNA_3,mRNA_3,P3,RIBOSOME;
+
+// ============================================================ //
+// Control terms gene expression -
+#pragma handler_class = VLCGGeneExpressionControlParserDelegate
+// ============================================================ //
+induction_gene_1_by_T,T,induction_gene_1,induction;
+induction_gene_2_by_P1,P1,induction_gene_2,induction;
+induction_gene_3_by_P2,P2,induction_gene_3,induction;
