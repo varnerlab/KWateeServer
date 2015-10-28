@@ -49,11 +49,11 @@ To test your Kwatee installation, we have included example model specifications 
 
 	[Wayman J, Sagar A and J. Varner (2015) Dynamic Modeling of Cell Free Biochemical Networks using Effective Kinetic Models. Processes DOI:10.3390/pr3010138](http://www.mdpi.com/2227-9717/3/1/138)
 	
-	__Requirments:__ libSBML and the SUNDIALS package in Julia.
+	__Requirements:__ libSBML and the SUNDIALS package in Julia.
 
 * [Kwatee GRN/Signal Transduction Model Plugin](https://github.com/varnerlab/Kwatee-GRN-Plugin): The gene regulatory network (GRN)/signal transduction plugin generates Julia simulation code for dynamic signal transduction/gene expression models. 
 
-	__Requirments:__ The SUNDIALS package in Julia.
+	__Requirements:__ The SUNDIALS package in Julia.
 
 
 How do I execute a Kwatee code generation job?
