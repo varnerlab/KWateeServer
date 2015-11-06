@@ -27,6 +27,13 @@ task copyFilesToGRNPlugin(type: Copy) {
     include('*.jar')
 }
 
+task copyFilesToPBPKPlugin(type: Copy) {
+    from("build/libs")
+    into("/Users/jeffreyvarner/Desktop/development/kwatee-pbpk-plugin/libs")
+    include('*.jar')
+}
+
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
