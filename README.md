@@ -54,7 +54,10 @@ To test your Kwatee installation, we have included example model specifications 
 * [Kwatee GRN/Signal Transduction Model Plugin](https://github.com/varnerlab/Kwatee-GRN-Plugin): The gene regulatory network (GRN)/signal transduction plugin generates Julia simulation code for dynamic signal transduction/gene expression models. 
 
 	__Requirements:__ The SUNDIALS package in Julia.
+	
+* [Kwatee Physiologically based Pharmacokinetic Modeling (PBPK) Plugin](https://github.com/varnerlab/Kwatee-PBPKModel-Plugin): The Kwatee PBPK plugin generates Julia simulation code for blood biochemistry occuring in multiple well-mixed well-perfused compartments.
 
+	__Requirements:__ The SUNDIALS package in Julia.
 
 How do I execute a Kwatee code generation job?
 -----------
