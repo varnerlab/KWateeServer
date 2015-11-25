@@ -486,7 +486,13 @@ public class VLCGTransformationPropertyTree implements VLCGInputHandler {
 
         try {
             Node propNode = (Node) _xpath.evaluate(xpath_string, _document_transformation_property_tree, XPathConstants.NODE);
-            property_string = propNode.getNodeValue();
+            if (propNode != null){
+                property_string = propNode.getNodeValue();
+            }
+            else {
+
+                return null;
+            }
         }
         catch (Exception error)
         {
