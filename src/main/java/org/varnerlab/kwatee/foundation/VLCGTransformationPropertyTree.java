@@ -341,6 +341,67 @@ public class VLCGTransformationPropertyTree implements VLCGInputHandler {
         return fully_qualified_path;
     }
 
+    public String lookupKwateeBoundsFunctionName() throws Exception {
+
+        // Lookup the network file name -
+        String xpath_network_filename = ".//BoundsFunction[@path_symbol='KWATEE_SOURCE_OUTPUT_PATH']/@filename";
+        String filename = lookupPropertyValueFromTreeUsingXPath(xpath_network_filename);
+
+        // Put these together -
+        String function_name = filename.split("\\.")[0];
+
+        // return -
+        return function_name;
+    }
+
+    public String lookupKwateeBoundsFunctionFilePath() throws Exception {
+
+        // Lookup the location of the KWATEE_INPUT_PATH -
+        String xpath_input_path = ".//path[@symbol='KWATEE_SOURCE_OUTPUT_PATH']/@path_location";
+        String input_path = lookupPropertyValueFromTreeUsingXPath(xpath_input_path);
+
+        // Lookup the network file name -
+        String xpath_network_filename = ".//BoundsFunction[@path_symbol='KWATEE_SOURCE_OUTPUT_PATH']/@filename";
+        String filename = lookupPropertyValueFromTreeUsingXPath(xpath_network_filename);
+
+        // Put these together -
+        String fully_qualified_path = input_path+filename;
+
+        // return -
+        return fully_qualified_path;
+    }
+
+    public String lookupKwateeTypesLibraryName() throws Exception {
+
+        // Lookup the network file name -
+        String xpath_network_filename = ".//TypesLibrary[@path_symbol='KWATEE_SOURCE_OUTPUT_PATH']/@filename";
+        String filename = lookupPropertyValueFromTreeUsingXPath(xpath_network_filename);
+
+        // Put these together -
+        String function_name = filename.split("\\.")[0];
+
+        // return -
+        return function_name;
+    }
+
+    public String lookupKwateeTypesLibraryFilePath() throws Exception {
+
+        // Lookup the location of the KWATEE_INPUT_PATH -
+        String xpath_input_path = ".//path[@symbol='KWATEE_SOURCE_OUTPUT_PATH']/@path_location";
+        String input_path = lookupPropertyValueFromTreeUsingXPath(xpath_input_path);
+
+        // Lookup the network file name -
+        String xpath_network_filename = ".//TypesLibrary[@path_symbol='KWATEE_SOURCE_OUTPUT_PATH']/@filename";
+        String filename = lookupPropertyValueFromTreeUsingXPath(xpath_network_filename);
+
+        // Put these together -
+        String fully_qualified_path = input_path+filename;
+
+        // return -
+        return fully_qualified_path;
+    }
+
+
     public String lookupKwateeCompartmentFlowFunctionName() throws Exception {
 
         // Lookup the network file name -
@@ -353,6 +414,7 @@ public class VLCGTransformationPropertyTree implements VLCGInputHandler {
         // return -
         return function_name;
     }
+
 
     public String lookupKwateeCompartmentFlowFunctionFilePath() throws Exception {
 
