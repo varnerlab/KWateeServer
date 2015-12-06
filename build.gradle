@@ -15,6 +15,12 @@ task copyFilesToServer(type: Copy) {
     include('*.jar')
 }
 
+task copyFilesToNFBAPlugin(type: Copy) {
+    from("build/libs")
+    into("/Users/jeffreyvarner/Desktop/development/Kwatee-NFBA-Plugin/libs")
+    include('*.jar')
+}
+
 task copyFilesToCellFreePlugin(type: Copy) {
     from("build/libs")
     into("/Users/jeffreyvarner/Desktop/development/kwatee-cellfree-plugin/libs")
