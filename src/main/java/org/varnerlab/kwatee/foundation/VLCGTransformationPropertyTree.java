@@ -433,7 +433,7 @@ public class VLCGTransformationPropertyTree implements VLCGInputHandler {
         return fully_qualified_path;
     }
 
-    public String lookupKwateeDilutionRateFunctionName() throws Exception {
+    public String lookupKwateeDilutionFunctionName() throws Exception {
 
         // Lookup the network file name -
         String xpath_network_filename = ".//DilutionFunction[@path_symbol='KWATEE_SOURCE_OUTPUT_PATH']/@filename";
